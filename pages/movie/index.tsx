@@ -9,16 +9,16 @@ interface IndexPageProps {
 }
 
 function IndexPage(): JSX.Element {
-  const [products, setData] = useState([]);
+  const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    movieService.getPopular().then(data => setData(data));
+    movieService.getPopular().then(data => setMovies(data));
 }, []);
   
 
   return (
     <div className="mx-auto max-w-6xl">
-      <ProductListings products={products} />      
+      <ProductListings movies={movies} />      
     </div>
   )
 }

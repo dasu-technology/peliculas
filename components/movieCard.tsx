@@ -2,15 +2,15 @@ import { IMovie } from '@/interface/IMove';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function MovieCard({ product }: { product: IMovie }): JSX.Element {
-  const id: number = product.id;
-  const title: string = product.title;
-  const description: string = product.overview;
+function MovieCard({ movie }: { movie: IMovie }): JSX.Element {
+  const id: number = movie.id;
+  const title: string = movie.title;
+  const description: string = movie.overview;
 
   //const imageNode = product.node.images.edges[0].node;
 
   return (
-    <Link href={`/products/${id}`} passHref>
+    <Link href={`/movie/${id}`} passHref>
         <div className="h-72 border-b-2 border-palette-lighter relative">
          {/*  <Image
             src={imageNode.originalSrc}
